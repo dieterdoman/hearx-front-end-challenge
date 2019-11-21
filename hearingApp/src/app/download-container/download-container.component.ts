@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./download-container.component.scss']
 })
 export class DownloadContainerComponent implements OnInit {
-
-  constructor() { }
+  // audio = new Audio();
+  constructor() {
+    // this.audio.src = '../../assets/1kHz_44100Hz_16bit_05sec.wav';
+    // this.audio.load();
+    // this.audio.play();
+  }
 
   ngOnInit() {
   }
