@@ -15,7 +15,7 @@ svg.material-icons:not(:last-child) {
   border-radius: 4px;
   border: 1px solid #eee;
   background-color: #fafafa;
-  height: 60px;
+  height: 40px;
   width: 200px;
   margin: 0 8px 16px;
   padding: 16px;
@@ -27,7 +27,7 @@ svg.material-icons:not(:last-child) {
   line-height: 24px;
 }
 
-.card:hover:not(:disabled) {
+.card:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 17px rgba(black, 0.35);
 }
@@ -55,12 +55,5 @@ button:hover {
 
 button:hover {
   color: #125699;
-}
-
-button:disabled,
-button[disabled]{
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
 }
 

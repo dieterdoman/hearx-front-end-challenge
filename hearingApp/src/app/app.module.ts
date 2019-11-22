@@ -9,6 +9,10 @@ import { ButtonComponent } from './button/button.component';
 import { DetailsContainerComponent } from './details-container/details-container.component';
 import { TestContainerComponent } from './test-container/test-container.component';
 import { ResultContainerComponent } from './result-container/result-container.component';
+import { UserComponent } from './user/user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule, MatInputModule} from '@angular/material';
 
 const routes: Routes = [
   { path: '', component: StartContainerComponent },
@@ -26,14 +30,23 @@ const routes: Routes = [
     ButtonComponent,
     DetailsContainerComponent,
     TestContainerComponent,
-    ResultContainerComponent
+    ResultContainerComponent,
+    UserComponent,
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [RouterModule],
+  exports: [
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
 export class AppModule { }

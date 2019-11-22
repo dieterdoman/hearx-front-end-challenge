@@ -1,0 +1,30 @@
+<form [formGroup]="detailsForm" (ngSubmit)="onSubmit(detailsForm.value)">
+  <div class="input">
+    <mat-form-field>
+      <input matInput formControlName="name" required>
+      <mat-error *ngFor="let validation of validationMessages.name">
+        <mat-error class="error-message" *ngIf="detailsForm.get('name').hasError(validation.type) && (detailsForm.get('name').dirty || detailsForm.get('name').touched)">{{validation.message}}</mat-error>
+      </mat-error>
+      <mat-placeholder>
+        <span>Name</span>
+      </mat-placeholder>
+    </mat-form-field>
+  </div>
+  <div class="input">
+    <mat-form-field>
+      <input matInput formControlName="email" required>
+      <mat-error *ngFor="let validation of validationMessages.email">
+        <mat-error class="error-message" *ngIf="detailsForm.get('email').hasError(validation.type) && (detailsForm.get('email').dirty || detailsForm.get('email').touched)">{{validation.message}}</mat-error>
+      </mat-error>
+      <mat-placeholder>
+        <span>Email</span>
+      </mat-placeholder>
+    </mat-form-field>
+  </div>
+
+  <div ng-click="submitForm()">
+    <app-button text="Next" [disabled]="!detailsForm.valid">
+    </app-button>
+  </div>
+</form>
+
