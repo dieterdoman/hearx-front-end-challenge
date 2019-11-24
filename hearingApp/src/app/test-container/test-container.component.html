@@ -1,4 +1,10 @@
-<div (click)="clickResult()">
-  <app-button text="click me">
-  </app-button>
-</div>
+<app-container>
+  <app-heading
+    icon="assessment"
+    message="The same frequency will play twice, 1 for each ear. When you hear the frequency press the Click me button.">
+  </app-heading>
+  <div class="button" (click)="clickResult()">
+    <app-button text="Click me" icon="hearing">
+    </app-button>
+  </div>
+</app-container>

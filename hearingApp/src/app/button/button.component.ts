@@ -9,6 +9,7 @@ export class ButtonComponent implements OnInit {
   @Input() routeLocation;
   @Input() text;
   @Input() disabled = false;
+  @Input() icon;
   constructor() { }
 
   ngOnInit() {

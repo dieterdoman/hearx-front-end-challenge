@@ -1,5 +1,5 @@
 <form [formGroup]="detailsForm" (ngSubmit)="onSubmit(detailsForm.value)">
-  <div class="input">
+  <div>
     <mat-form-field>
       <input matInput formControlName="name" required>
       <mat-error *ngFor="let validation of validationMessages.name">
@@ -10,7 +10,7 @@
       </mat-placeholder>
     </mat-form-field>
   </div>
-  <div class="input">
+  <div>
     <mat-form-field>
       <input matInput formControlName="email" required>
       <mat-error *ngFor="let validation of validationMessages.email">
@@ -22,8 +22,8 @@
     </mat-form-field>
   </div>
 
-  <div ng-click="submitForm()">
-    <app-button text="Next" [disabled]="!detailsForm.valid">
+  <div class="button" ng-click="submitForm()">
+    <app-button text="Start assessment" [disabled]="!detailsForm.valid" icon="assessment">
     </app-button>
   </div>
 </form>

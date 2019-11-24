@@ -1,6 +1,28 @@
-<div class="card highlight-card card-small">
-  <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-  <span>{{ title }} app is running!</span>
-</div>
-<app-button text="Start" routeLocation="download">
-</app-button>
+<app-container>
+  <app-heading
+    icon="hearing"
+    message="This is application to screen your hearing ability. You will be tested of 5 frequencies: 100Hz, 250Hz, 440Hz, 1kHz and 10kHz.">
+  </app-heading>
+  <app-heading
+    icon="assignment"
+    message="We will need some of your info like name and email address.">
+  </app-heading>
+  <app-heading
+    icon="assessment"
+    message="Then we will perform the hearing test.">
+  </app-heading>
+  <app-heading
+    icon="signal_cellular_alt"
+    message="The result range categories are as follows:">
+  </app-heading>
+  <ul class="result">
+    <li>0 - 2 Severe</li>
+    <li>3 - 5 Moderate</li>
+    <li>6 - 8 Mild</li>
+    <li>9 - 10 Normal</li>
+  </ul>
+  <div class="button">
+    <app-button text="Start" routeLocation="download" icon="assessment">
+    </app-button>
+  </div>
+</app-container>

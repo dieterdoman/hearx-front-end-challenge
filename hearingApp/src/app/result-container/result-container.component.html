@@ -1,7 +1,30 @@
-<p>
-  Result: {{result$ | async}}
-</p>
-<p *ngIf="user$ | async">
-  Name: {{(user$ | async).name}}
-  Email: {{(user$ | async).email}}
-</p>
+<app-container>
+  <app-heading
+    icon="signal_cellular_alt"
+    message="The results:">
+  </app-heading>
+  <div class="result">
+    <p *ngIf="user$ | async">
+      Name: {{(user$ | async).name}}
+    </p>
+    <p *ngIf="user$ | async">
+      Email: {{(user$ | async).email}}
+    </p>
+    <p *ngIf="(result$ | async) <= 2">
+      0 - 2 Severe
+    </p>
+    <p *ngIf="(result$ | async) <= 5 && (result$ | async) > 2">
+      3 - 5 Moderate
+    </p>
+    <p *ngIf="(result$ | async) <= 8 && (result$ | async) > 5">
+      6 - 8 Mild
+    </p>
+    <p *ngIf="(result$ | async) <= 10 && (result$ | async) > 9">
+      9 - 10 Normal
+    </p>
+  </div>
+  <div class="button">
+    <app-button text="Return" routeLocation="" icon="done">
+    </app-button>
+  </div>
+</app-container>

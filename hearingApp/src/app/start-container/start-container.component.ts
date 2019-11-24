@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./start-container.component.scss']
 })
 export class StartContainerComponent implements OnInit {
-  title = 'Hearing App';
 
   constructor() {
   }

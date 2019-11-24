@@ -16,6 +16,8 @@ import {MatFormFieldModule, MatInputModule} from '@angular/material';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './reducers';
 import {FlowGuard} from './flowGuard';
+import { ContainerComponent } from './container/container.component';
+import { HeadingComponent } from './heading/heading.component';
 
 const routes: Routes = [
   { path: '', component: StartContainerComponent },
@@ -36,6 +38,8 @@ const routes: Routes = [
     TestContainerComponent,
     ResultContainerComponent,
     UserComponent,
+    ContainerComponent,
+    HeadingComponent,
   ],
   imports: [
     ReactiveFormsModule,

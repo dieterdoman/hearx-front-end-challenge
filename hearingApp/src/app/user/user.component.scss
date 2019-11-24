@@ -1,59 +1,57 @@
-svg.material-icons {
-  height: 24px;
-  width: auto;
+.button {
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
 }
 
-svg.material-icons:not(:last-child) {
-  margin-right: 8px;
+::ng-deep .mat-form-field {
+  .mat-input-element {
+    color: white;
+  }
+  .mat-form-field-label {
+    color: white;
+  }
+  .mat-form-field-underline {
+    background-color: white;
+  }
+  .mat-form-field-ripple {
+    background-color: white;
+  }
+  .mat-form-field-required-marker {
+    color: white;
+  }
+  .mat-error {
+    color: white;
+  }
 }
 
-.card svg.material-icons path {
-  fill: #888;
+::ng-deep .mat-form-field.mat-focused {
+  .mat-form-field-label {
+    color: white;
+  }
+  .mat-form-field-ripple {
+    background-color: white;
+  }
+  .mat-form-field-required-marker {
+    color: white;
+  }
+  .mat-input-element {
+    color: white;
+  }
 }
 
-.card {
-  border-radius: 4px;
-  border: 1px solid #eee;
-  background-color: #fafafa;
-  height: 40px;
-  width: 200px;
-  margin: 0 8px 16px;
-  padding: 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-  line-height: 24px;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(black, 0.35);
-}
-
-.card.highlight-card {
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-  border: none;
-  width: auto;
-  min-width: 30%;
-  position: relative;
-}
-
-.card.card.highlight-card span {
-  margin-left: 60px;
-}
-
-button,
-button:visited,
-button:hover {
-  color: #1976d2;
-  text-decoration: none;
-}
-
-button:hover {
-  color: #125699;
+::ng-deep .mat-form-field.mat-form-field-invalid {
+  .mat-input-element {
+    color: white;
+  }
+  .mat-form-field-label {
+    color: white;
+    .mat-form-field-required-marker {
+      color: white;
+    }
+  }
+  .mat-form-field-ripple {
+    background-color: white;
+  }
 }
 
