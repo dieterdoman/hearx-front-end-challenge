@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {Store} from '@ngrx/store';
+import * as fromRoot from '../reducers';
+import {ResultChangeAction} from '../actions/results';
 
 const audioFiles = [
   '../../assets/1kHz_44100Hz_16bit_05sec.wav',
@@ -28,7 +31,7 @@ export class TestContainerComponent {
   audio = new Audio();
   index = 0;
   results = [false, false, false, false, false, false, false, false, false, false];
-  constructor(private router: Router) {
+  constructor(public store: Store<fromRoot.State>, private router: Router) {
     this.audio.addEventListener('canplaythrough', () => {
       setTimeout(() => {
           this.audio.pause();
@@ -36,7 +39,8 @@ export class TestContainerComponent {
           if (this.index < audioFiles.length) {
             this.playAudio();
           } else {
-            console.log(this.results);
+            const result = this.results.filter((value) => value).length;
+            store.dispatch(new ResultChangeAction(result));
             this.router.navigate(['/results']);
           }
         }, SECOND);

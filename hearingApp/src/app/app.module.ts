@@ -13,6 +13,8 @@ import { UserComponent } from './user/user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule, MatInputModule} from '@angular/material';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './reducers';
 
 const routes: Routes = [
   { path: '', component: StartContainerComponent },
@@ -40,6 +42,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
+    StoreModule.forRoot(reducers),
   ],
   providers: [],
   bootstrap: [AppComponent],
