@@ -15,13 +15,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule, MatInputModule} from '@angular/material';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './reducers';
+import {FlowGuard} from './flowGuard';
 
 const routes: Routes = [
   { path: '', component: StartContainerComponent },
-  { path: 'download', component: DownloadContainerComponent },
-  { path: 'details', component: DetailsContainerComponent },
-  { path: 'test', component: TestContainerComponent },
-  { path: 'results', component: ResultContainerComponent },
+  { path: 'download', component: DownloadContainerComponent, canActivate: [FlowGuard] },
+  { path: 'details', component: DetailsContainerComponent, canActivate: [FlowGuard] },
+  { path: 'test', component: TestContainerComponent, canActivate: [FlowGuard] },
+  { path: 'results', component: ResultContainerComponent, canActivate: [FlowGuard] },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
@@ -44,7 +46,7 @@ const routes: Routes = [
     MatInputModule,
     StoreModule.forRoot(reducers),
   ],
-  providers: [],
+  providers: [FlowGuard],
   bootstrap: [AppComponent],
   exports: [
     RouterModule,
