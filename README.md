@@ -1,6 +1,6 @@
 # HearingApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19. Navigate into hearingApp to run the below commands.
 
 ## Development server
 
