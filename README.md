@@ -12,7 +12,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Constraints
 
-This was my first angular application ever. So tried to use React which I am use to to guide my design. Was also limitted for time since a have muplti assessments with different companies to complete as well as I hosted a refactoring workshop on the book [Refactoring by Martin Fowler](https://martinfowler.com/books/refactoring.html) on Saterday that took some of my time.
+This was my first angular application ever. So tried to use React experience to guide my design. Was also limited for time since a have mupltiple assessments with different companies to complete as well as I hosted a refactoring workshop on the book [Refactoring by Martin Fowler](https://martinfowler.com/books/refactoring.html) on Saterday that took some of my time.
 
 ## Uncompleted
 
